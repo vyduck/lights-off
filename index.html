@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Lights Off | Vyankatesh</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    
+    <link rel="stylesheet" href="lights-off.css">
+
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <nav>
+        <h1># Lights Off!</h1>
+
+        <div id="nav-links">
+            <a href="/index.html">About me</a>
+            <a href="/projects.html">My Projects</a>
+            <a href="/games/index.html">Games</a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="rules">
+            <h2>
+                ## Rules
+            </h2>
+            <p>
+                1. Click on a light to turn it off.
+            </p>
+            <p>
+                2. Turning a light on or off will toggle the lights adjacent to it.
+            </p>
+            <p>
+                3. You have turn off all the lights in order to win.
+            </p>
+        </section>
+        <section id="config">
+            <h2>
+                ## Config
+            </h2>
+            <div>
+                Select board size:
+                <select name="size" id="size">
+                    <option value="4">4x4</option>
+                    <option value="5">5x5</option>
+                    <option value="6">6x6</option>
+                    <option value="7">7x7</option>
+                    <option value="8">8x8</option>
+                </select>
+            </div>
+            <div>
+                Select difficulty:
+                <select name="difficulty" id="difficulty">
+                    <option value="2">Easy</option>
+                    <option value="4">Intermediate</option>
+                    <option value="6">Medium</option>
+                    <option value="8">Hard</option>
+                    <option value="10">Very hard</option>
+                </select>
+            </div>
+            <button id="start" type="button">Start game</button>
+        </section>
+        <section>
+            Moves: <span id="movesCounter">0</span>
+        </section>
+        <section id="gameHolder">
+            <div>
+            </div>
+            <div id="game"></div>
+        </section>
+    </main>
+</body>
+</html>
