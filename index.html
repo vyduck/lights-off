@@ -5,48 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Lights Off | Vyankatesh</title>
+    <title>Lights Off</title>
 
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/nav.css">
-    
-    <link rel="stylesheet" href="lights-off.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/lights-off.css">
 
     <script src="index.js" defer></script>
 </head>
 
 <body>
-    <nav>
-        <h2># Lights Off!</h2>
-
-        <div id="nav-links">
-            <a href="/">About me</a>
-            <a href="/projects.html">Projects</a>
-        </div>
-    </nav>
-
     <main>
+        <nav>
+            <a href="/">Home</a>        
+        </nav>
         <section id="rules">
-            <h2>
-                ## Rules
+            <h2 class="section-title">
+                Rules
             </h2>
             <p>
                 1. Click on a light to turn it off.
             </p>
             <p>
-                2. Turning a light on or off will toggle the lights adjacent to it.
+                2. Toggling a light will toggle the tiles above, below, to the right, and to the left to it as well.
             </p>
             <p>
                 3. You have turn off all the lights in order to win.
             </p>
         </section>
         <section id="config">
-            <h2>
-                ## Config
+            <h2 class="section-title">
+                Config
             </h2>
             <div>
                 Select board size:
-                <select name="size" id="size">
+                <select name="size" id="size" class="config">
                     <option value="4">4x4</option>
                     <option value="5">5x5</option>
                     <option value="6">6x6</option>
@@ -56,7 +48,7 @@
             </div>
             <div>
                 Select difficulty:
-                <select name="difficulty" id="difficulty">
+                <select name="difficulty" id="difficulty" class="config">
                     <option value="2">Easy</option>
                     <option value="4">Intermediate</option>
                     <option value="6">Medium</option>
@@ -66,12 +58,8 @@
             </div>
             <button id="start" type="button">Start game</button>
         </section>
-        <section>
-            Moves: <span id="movesCounter">0</span>
-        </section>
+        Moves: <span id="movesCounter">0</span>
         <section id="gameHolder">
-            <div>
-            </div>
             <div id="game"></div>
         </section>
     </main>
